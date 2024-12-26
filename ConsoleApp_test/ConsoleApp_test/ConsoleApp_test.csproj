@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{07D0E665-1FD4-46FA-A38D-8A0DAA628856}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ConsoleApp_test</RootNamespace>
+    <AssemblyName>ConsoleApp_test</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MEDAQLib.NET, Version=0.0.0.0, Culture=neutral, PublicKeyToken=5e32bc1c5c8cdc60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\MEDAQLib-5.1.1.33685\Release-x64\MEDAQLib.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Thorlabs.MotionControl.Benchtop.BrushlessMotorCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\Thorlabs.MotionControl.Benchtop.BrushlessMotorCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="ThorLabs.MotionControl.Benchtop.DCServoCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\ThorLabs.MotionControl.Benchtop.DCServoCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="Thorlabs.MotionControl.Benchtop.NanoTrakCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\Thorlabs.MotionControl.Benchtop.NanoTrakCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="Thorlabs.MotionControl.Benchtop.PiezoCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\Thorlabs.MotionControl.Benchtop.PiezoCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="ThorLabs.MotionControl.Benchtop.PrecisionPiezoCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\ThorLabs.MotionControl.Benchtop.PrecisionPiezoCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="Thorlabs.MotionControl.Benchtop.StepperMotorCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\Thorlabs.MotionControl.Benchtop.StepperMotorCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="Thorlabs.MotionControl.DeviceManagerCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Thorlabs\Kinesis\Thorlabs.MotionControl.DeviceManagerCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="Thorlabs.MotionControl.GenericMotorCLI, Version=1.14.37.21486, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Thorlabs\Kinesis\Thorlabs.MotionControl.GenericMotorCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="ThorLabs.MotionControl.KCube.DCServoCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Thorlabs\Kinesis\ThorLabs.MotionControl.KCube.DCServoCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="Thorlabs.MotionControl.KCube.LiquidCrystalCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\Thorlabs.MotionControl.KCube.LiquidCrystalCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="Thorlabs.MotionControl.KCube.NanoTrakCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\Thorlabs.MotionControl.KCube.NanoTrakCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="Thorlabs.MotionControl.KCube.PiezoCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\Thorlabs.MotionControl.KCube.PiezoCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="Thorlabs.MotionControl.KCube.PiezoStrainGaugeCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\Thorlabs.MotionControl.KCube.PiezoStrainGaugeCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="ThorLabs.MotionControl.KCube.PositionAlignerCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\ThorLabs.MotionControl.KCube.PositionAlignerCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="Thorlabs.MotionControl.KCube.SolenoidCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\Thorlabs.MotionControl.KCube.SolenoidCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="Thorlabs.MotionControl.KCube.StepperMotorCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\Thorlabs.MotionControl.KCube.StepperMotorCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="ThorLabs.MotionControl.KCube.StrainGaugeCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\ThorLabs.MotionControl.KCube.StrainGaugeCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="Thorlabs.MotionControl.ModularRackCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\Thorlabs.MotionControl.ModularRackCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="ThorLabs.MotionControl.PolarizerCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\ThorLabs.MotionControl.PolarizerCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="Thorlabs.MotionControl.PositionReadoutEncoderCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\Thorlabs.MotionControl.PositionReadoutEncoderCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="Thorlabs.MotionControl.TCube.BrushlessMotorCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\Thorlabs.MotionControl.TCube.BrushlessMotorCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="Thorlabs.MotionControl.TCube.DCServoCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\Thorlabs.MotionControl.TCube.DCServoCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="ThorLabs.MotionControl.TCube.InertialMotorCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\ThorLabs.MotionControl.TCube.InertialMotorCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="Thorlabs.MotionControl.TCube.LaserDiodeCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\Thorlabs.MotionControl.TCube.LaserDiodeCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="Thorlabs.MotionControl.TCube.LaserSourceCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\Thorlabs.MotionControl.TCube.LaserSourceCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="Thorlabs.MotionControl.TCube.NanoTrakCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\Thorlabs.MotionControl.TCube.NanoTrakCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="Thorlabs.MotionControl.TCube.PiezoCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\Thorlabs.MotionControl.TCube.PiezoCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="Thorlabs.MotionControl.TCube.QuadCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\Thorlabs.MotionControl.TCube.QuadCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="Thorlabs.MotionControl.TCube.SolenoidCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\Thorlabs.MotionControl.TCube.SolenoidCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="Thorlabs.MotionControl.TCube.StepperMotorCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\Thorlabs.MotionControl.TCube.StepperMotorCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="Thorlabs.MotionControl.TCube.StrainGaugeCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\Thorlabs.MotionControl.TCube.StrainGaugeCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="ThorLabs.MotionControl.TDIEngineCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\ThorLabs.MotionControl.TDIEngineCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="ThorLabs.MotionControl.VerticalStageCLI, Version=1.14.49.23058, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\ThorLabs.MotionControl.VerticalStageCLI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
